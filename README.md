@@ -59,3 +59,14 @@ The project is designed to be **fully reproducible**:
 - The repository is version-controlled with Git and includes all necessary files for replication.
 
 These practices ensure that anyone who clones the repository can reproduce the same workflow, results, and insights.
+
+---
+
+## Data Source and Acknowledgements
+The dataset used in this project originates from the  
+**UCI Machine Learning Repository**:  
+[Diabetes 130-US Hospitals for Years 1999–2008](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
+
+
+Acknowledgements:
+Beata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, “Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,” BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.

@@ -1,4 +1,4 @@
-# 📘 Dataset Description – Hospital Readmissions (Diabetic Patients)
+# Dataset Description – Hospital Readmissions (Diabetic Patients)
 
 ## Overview
 This dataset contains medical records of diabetic patients collected from multiple U.S. hospitals over a ten-year period.  
@@ -6,7 +6,7 @@ Each record represents a single hospital **encounter (admission)** for a patient
 
 ---
 
-## 📄 Data Information
+## Data Information
 
 - **Number of Rows:** 101,766  
 - **Number of Columns:** 50  
@@ -17,7 +17,7 @@ Each row corresponds to one hospital encounter, and each patient can have multip
 
 ---
 
-## 📂 Data Structure
+## Data Structure
 
 | Variable Name | Role | Type | Description | Units | Missing Values |
 |----------------|------|------|--------------|--------|----------------|
@@ -52,7 +52,7 @@ Each row corresponds to one hospital encounter, and each patient can have multip
 
 ---
 
-## 🧬 Feature Groups
+## Feature Groups
 
 - **Identification:**  
   `encounter_id`, `patient_nbr`
@@ -85,7 +85,7 @@ Each row corresponds to one hospital encounter, and each patient can have multip
 
 ---
 
-## ⚙️ Data Notes
+## Data Notes
 
 - The dataset includes both **categorical** and **numerical** variables.  
 - Several columns contain **missing values**, notably `race`, `weight`, `payer_code`, `medical_specialty`, and the diagnosis fields.  

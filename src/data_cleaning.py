@@ -94,6 +94,8 @@ def clean_data():
     df_data.drop(columns=['troglitazone'], inplace=True)  # only No values
     df_data.drop(columns=['tolazamide'], inplace=True)  # only No values
     df_data.drop(columns=['acetohexamide'], inplace=True)  # only No values
+    df_data.drop(columns=['patient_nbr'], inplace=True)
+    df_data.drop(columns=['payer_code'], inplace=True)
 
     return df_data
 

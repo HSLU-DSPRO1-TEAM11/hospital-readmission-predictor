@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
 def clean_data():
     """Load and clean the diabetic_data dataset, returning a cleaned pandas DataFrame."""
@@ -10,7 +8,7 @@ def clean_data():
 
     df_data.drop('encounter_id', axis=1, inplace=True)
 
-    #df_data.drop('race', axis=1, inplace=True)
+    # df_data.drop('race', axis=1, inplace=True)
 
     df_data = df_data[df_data['gender'] != 'Unknown/Invalid'] # remove Unknown
     df_data.drop('weight', axis=1, inplace=True) # drop weight as not enough values
@@ -98,9 +96,3 @@ def clean_data():
     df_data.drop(columns=['payer_code'], inplace=True)
 
     return df_data
-
-# If script is executed directly, preview the cleaned dataset
-if __name__ == "__main__":
-    df_clean = clean_data()
-    print(df_clean.info())
-    print(df_clean.head())

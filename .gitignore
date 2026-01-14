@@ -208,3 +208,21 @@ __marimo__/
 
 # Can become very large and is more for experimental testing
 mlruns/
+
+# IDE
+.idea/
+
+# MLflow artifacts (too large, can be regenerated)
+mlartifacts/
+
+# Reports and personal documents
+*.docx
+*.pdf
+REPORT_STRUCTURE.md
+CLAUDE.md
+create_report_template.py
+DO_BEFORE_DELIVERY.md
+
+# Temporary files
+tmpclaude-*.cwd
+nul

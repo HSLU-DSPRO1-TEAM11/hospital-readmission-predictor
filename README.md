@@ -61,7 +61,7 @@ This dataset is **structured** and tabular, ideal for supervised learning approa
 
 ```
 hospital-readmission-predictor/
-├── notebooks/                     # Jupyter notebooks (run in order)
+├── notebooks/                     # Jupyter notebooks
 │   ├── data_exploration.ipynb     # Initial EDA and visualization
 │   ├── data_cleaning.ipynb        # Binary classification data cleaning
 │   ├── feature_engineering.ipynb  # Feature creation and selection

@@ -76,9 +76,7 @@ hospital-readmission-predictor/
 ├── data/
 │   ├── raw/                       # Original dataset files
 │   └── processed/                 # Generated processed data
-├── webapp/                        # Streamlit web application
-├── mlruns/                        # MLflow run metadata
-└── mlartifacts/                   # MLflow model artifacts
+└── webapp/                        # Streamlit web application
 ```
 
 ---
@@ -117,18 +115,22 @@ mlflow ui --port 5000
 
 Keep this running in a separate terminal. Access the UI at http://localhost:5000
 
-### Step 2: Run Notebooks in Order
+### Step 2: Run Notebooks
 
-Navigate to the `notebooks/` directory and execute the notebooks in this sequence:
+Navigate to the `notebooks/` directory. The notebooks are designed to be **run independently** - each notebook imports reusable modules from `src/` that automatically execute all required preprocessing steps.
 
-| Order | Notebook | Description |
-|-------|----------|-------------|
-| 1 | `data_exploration.ipynb` | Exploratory data analysis and visualization |
-| 2 | `data_cleaning.ipynb` | Data cleaning for binary classification |
-| 3 | `feature_engineering.ipynb` | Feature creation, encoding, and selection |
-| 4 | `machine_learning.ipynb` | Train baseline models (LogisticRegression, XGBoost, DecisionTree, RandomForest) |
-| 5 | `hyperparameter_tuning.ipynb` | Optimize model hyperparameters |
-| 6 | `multiclass_baseline.ipynb` | *(Optional)* 3-class classification approach |
+For example, running `machine_learning.ipynb` will automatically trigger data cleaning and feature engineering via the `src/` modules.
+
+| Notebook | Description | Dependencies |
+|----------|-------------|--------------|
+| `data_exploration.ipynb` | Exploratory data analysis and visualization | Raw data only |
+| `data_cleaning.ipynb` | Data cleaning for binary classification | Raw data only |
+| `feature_engineering.ipynb` | Feature creation, encoding, and selection | Uses `src/data_cleaning.py` |
+| `machine_learning.ipynb` | Train baseline models (LogisticRegression, XGBoost, DecisionTree, RandomForest) | Uses `src/feature_engineering.py` |
+| `hyperparameter_tuning.ipynb` | Optimize model hyperparameters | Uses `src/feature_engineering.py` |
+| `multiclass_baseline.ipynb` | *(Optional)* 3-class classification approach | Uses `src/feature_engineering_multiclass.py` |
+
+**Note:** For a complete walkthrough, running them in order (top to bottom) provides the best learning experience.
 
 ### Step 3: View Results in MLflow
 
